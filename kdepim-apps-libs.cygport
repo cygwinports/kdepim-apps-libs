@@ -1,0 +1,74 @@
+inherit kf5
+
+NAME="kdepim-apps-libs"
+VERSION=17.12.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE PIM application libraries"
+
+PKG_NAMES="${NAME}-common libKF5FollowupReminder5 libKF5FollowupReminder-devel
+	   libKF5KaddressbookGrantlee5 libKF5KaddressbookGrantlee-devel
+	   libKF5KaddressbookImportExport5 libKF5KaddressbookImportExport-devel
+	   libKF5KdepimDBusInterfaces5 libKF5KdepimDBusInterfaces-devel
+	   libKF5SendLater5 libKF5SendLater-devel"
+kdepim_apps_libs_common_CONTENTS="
+	etc/xdg/kdepim-apps-lib.*
+	usr/share/doc/${NAME}
+"
+libKF5FollowupReminder5_REQUIRES="${NAME}-common"
+libKF5FollowupReminder5_CONTENTS="
+	usr/bin/cygKF5FollowupReminder-5.dll
+"
+libKF5KaddressbookGrantlee5_REQUIRES="${NAME}-common"
+libKF5KaddressbookGrantlee5_CONTENTS="
+	usr/bin/cygKF5KaddressbookGrantlee-5.dll
+	usr/share/locale/*/LC_MESSAGES/libkaddressbookgrantlee.mo
+"
+libKF5KaddressbookImportExport5_REQUIRES="${NAME}-common"
+libKF5KaddressbookImportExport5_CONTENTS="
+	usr/bin/cygKF5KaddressbookImportExport-5.dll
+"
+libKF5KdepimDBusInterfaces5_REQUIRES="${NAME}-common"
+libKF5KdepimDBusInterfaces5_CONTENTS="
+	usr/bin/cygKF5KdepimDBusInterfaces-5.dll
+"
+libKF5SendLater5_REQUIRES="${NAME}-common"
+libKF5SendLater5_CONTENTS="
+	usr/bin/cygKF5SendLater-5.dll
+	usr/share/locale/*/LC_MESSAGES/libsendlater.mo
+"
+libKF5FollowupReminder_devel_CONTENTS="
+	usr/include/KF5/[Ff]ollowup[Rr]eminder/
+	usr/include/KF5/followupreminder_version.h
+	usr/lib/cmake/KF5FollowupReminder/
+	usr/lib/libKF5FollowupReminder.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_FollowupReminder.pri
+"
+libKF5KaddressbookGrantlee_devel_CONTENTS="
+	usr/include/KF5/[Kk]addressbook[Gg]rantlee/
+	usr/include/KF5/kaddressbookgrantlee_version.h
+	usr/lib/cmake/KF5KaddressbookGrantlee/
+	usr/lib/libKF5KaddressbookGrantlee.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KaddressbookGrantlee.pri
+"
+libKF5KaddressbookImportExport_devel_CONTENTS="
+	usr/include/KF5/[Kk][Aa]ddress[Bb]ook[Ii]mport[Ee]xport/
+	usr/include/KF5/kaddressbookimportexport_version.h
+	usr/lib/cmake/KF5KaddressbookImportExport/
+	usr/lib/libKF5KaddressbookImportExport.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KaddressbookImportExport.pri
+"
+libKF5KdepimDBusInterfaces_devel_CONTENTS="
+	usr/include/KF5/[Kk]depim[Dd][Bb]us[Ii]nterfaces/
+	usr/include/KF5/kdepimdbusinterfaces_version.h
+	usr/lib/cmake/KF5KdepimDBusInterfaces/
+	usr/lib/libKF5KdepimDBusInterfaces.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_KdepimDBusInterfaces.pri
+"
+libKF5SendLater_devel_CONTENTS="
+	usr/include/KF5/[Ss]end[Ll]ater/
+	usr/include/KF5/sendlater_version.h
+	usr/lib/cmake/KF5SendLater/
+	usr/lib/libKF5SendLater.dll.a
+	usr/lib/qt5/mkspecs/modules/qt_SendLater.pri
+"
